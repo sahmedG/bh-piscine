@@ -1,0 +1,1 @@
+curl -s https://learn.reboot01.com/assets/superhero/all.json | jq '.[70].name'
