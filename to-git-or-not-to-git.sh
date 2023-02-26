@@ -1,0 +1,1 @@
+curl -s https://learn.reboot01.com/api/graphql-engine/v1/graphql --data '{"query":"{user(where:{login:{_eq:\"sahmed\"}}){\nid}}"}' | sed 's/[^0-9]*//g'
