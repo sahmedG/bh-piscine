@@ -1,1 +1,1 @@
-ls -l | sed 'n;p'
+ls -l | awk 'NR!=1'
