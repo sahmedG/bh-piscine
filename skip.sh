@@ -1,1 +1,1 @@
-ls -l | tail -n+3
+ls -l | sed '1~2p'
