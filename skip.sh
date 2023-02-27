@@ -1,1 +1,1 @@
-ls -l | sed '1~2p'
+ls -l | sed '2~2p'
