@@ -1,1 +1,1 @@
-find . \( -name "a*" -o -name "*z"\)
+find . '(' -name "a*" ')'
