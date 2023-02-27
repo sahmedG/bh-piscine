@@ -13,4 +13,5 @@ func main(){
 	z01.PrintRune('7')
 	z01.PrintRune('8')
 	z01.PrintRune('9')
+	z01.PrintRune('\n')
 }
