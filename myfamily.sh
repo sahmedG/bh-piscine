@@ -1,2 +1,2 @@
 #curl -s https://learn.reboot01.com/assets/superhero/all.json | jq ' .[] | select(.id == 1) | .relatives '
-curl -s https://learn.reboot01.com/assets/superhero/all.json | jq '.[] | select(.id == 1) | .connections.relatives' | tr -d '"'
+curl -s https://learn.reboot01.com/assets/superhero/all.json | jq -r --arg id "$HERO_ID" '.[] | select(.id == $HERO_ID) | .connections.relatives' | tr -d '"'
