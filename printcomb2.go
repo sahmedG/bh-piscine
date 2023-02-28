@@ -12,14 +12,23 @@ func PrintComb2() {
 					} else if y == '0' {
 						continue
 					}
-					z01.PrintRune(i)
-					z01.PrintRune(j)
-					z01.PrintRune(' ')
-					z01.PrintRune(k)
-					z01.PrintRune(y)
-					z01.PrintRune(',')
-					z01.PrintRune(' ')
+					if j != '8' {
+						z01.PrintRune(i)
+						z01.PrintRune(j)
+						z01.PrintRune(' ')
+						z01.PrintRune(k)
+						z01.PrintRune(y)
+						z01.PrintRune(',')
+						z01.PrintRune(' ')
+					}
 				}
+			}
+			if j == '8' {
+				z01.PrintRune('9')
+				z01.PrintRune('8')
+				z01.PrintRune(' ')
+				z01.PrintRune('9')
+				z01.PrintRune('9')
 			}
 		}
 	}
