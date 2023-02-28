@@ -9,8 +9,7 @@ func PrintComb2() {
 				for y := '0'; y <= '9'; y++ {
 					if y == j {
 						continue
-					}
-					if y == '0' {
+					} else if y == '0' {
 						continue
 					}
 					z01.PrintRune(i)
