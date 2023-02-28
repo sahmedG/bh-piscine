@@ -1,1 +1,1 @@
-ls -l | tail -n +2
+ls -l | sed -n 'n;p'
