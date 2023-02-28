@@ -4,5 +4,10 @@ import "fmt"
 
 func PointOne(n *int) {
 	*n = *n + 1
-	fmt.Prinln('\n')
+}
+
+func main() {
+	n := 0
+	PointOne(&n)
+	fmt.Println(n)
 }
