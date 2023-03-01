@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"piscine"
 )
 
@@ -13,6 +14,6 @@ func main() {
 	fmt.Println(piscine.Atoi("+1234"))
 	fmt.Println(piscine.Atoi("-1234"))
 	fmt.Println(piscine.Atoi("++1234"))
-	fmt.Println(piscine.Atoi("--1234"))								
+	fmt.Println(piscine.Atoi("--1234"))
 	fmt.Println(piscine.Atoi("-5498123574568760000"))
 }
