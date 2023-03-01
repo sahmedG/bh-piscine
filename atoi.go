@@ -17,7 +17,7 @@ func Atoi(s string) int {
 
 	// return res * signMultiplier
 
-	byte_str := []rune(s)
+	byte_str := [...]rune(s)
 	for j := start; j < len(byte_str); j++ {
 		if byte_str[j] == ' ' {
 			break
