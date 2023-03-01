@@ -1,6 +1,6 @@
 package piscine
 
-func BasicAtoi2(s string) int {
+func Atoi(s string) int {
 	var start int
 	var res int
 
