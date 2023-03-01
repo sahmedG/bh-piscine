@@ -21,6 +21,7 @@ func Atoi(s string) int {
 	for j := start; j < len(byte_str); j++ {
 		if byte_str[j] == ' ' {
 			break
+			return res
 		}
 		if !(byte_str[j] >= '0' && byte_str[j] <= '9') {
 			return res * signMultiplier
