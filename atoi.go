@@ -4,29 +4,27 @@ func Atoi(s string) int {
 	var start int
 	var res int
 
-	// Handling numbers with +/- sign
 	signMultiplier := 1
 	if s[0] == '-' {
-		// Handling for negative numbers
 		signMultiplier = -1
 		start = 1
 	} else if s[0] == '+' {
-		// Handling for signed positive number
 		start = 1
 	}
 
-	// return res * signMultiplier
-
 	byte_str := []rune(s)
-	for j := start; j < len(byte_str); j++ {
+	for j := 0; j < len(byte_str); j++ {
 		if byte_str[j] == ' ' {
 			res = 0
 		}
-		if !(byte_str[j] >= '0' && byte_str[j] <= '9') {
-			return res * signMultiplier
-		} else {
-			res = res*10 + int(byte_str[j]-'0')
-		}
 	}
+
+	for i := start; i < len(byte_str); i++ {
+		if !(byte_str[i] >= '0' && byte_str[i] <= '9') {
+			return res * signMultiplier
+		}
+		res = res*10 + int(s[i]-'0')
+	}
+		
 	return res * signMultiplier
 }
