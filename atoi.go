@@ -18,10 +18,9 @@ func Atoi(s string) int {
 	// return res * signMultiplier
 
 	byte_str := []rune(s)
-	for j := start; j < len(byte_str)-1; j++ {
+	for j := start; j < len(byte_str); j++ {
 		if byte_str[j] == ' ' {
-			break
-			return res
+			res = 0
 		}
 		if !(byte_str[j] >= '0' && byte_str[j] <= '9') {
 			return res * signMultiplier
