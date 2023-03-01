@@ -1,10 +1,13 @@
 package piscine
 
 func Atoi(s string) int {
-	var start int
+	var start int = 0
 	var res int
-
 	var signMultiplier int = 1
+
+	if len(s) == 0 {
+		return 0
+	}
 	if s[0] == '-' {
 		signMultiplier = -1
 		start = 1
@@ -19,11 +22,11 @@ func Atoi(s string) int {
 		}
 	}
 
-	for i := start; i < len(byte_str); i++ {
-		if !(byte_str[i] >= '0' && byte_str[i] <= '9') {
+	for ; start < len(byte_str); start++ {
+		if !(byte_str[start] >= '0' && byte_str[start] <= '9') {
 			return 0
 		}
-		res = res*10 + int(s[i]-'0')
+		res = res*10 + int(s[start]-'0')
 	}
 
 	return res * signMultiplier
