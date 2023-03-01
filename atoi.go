@@ -15,7 +15,7 @@ func BasicAtoi2(s string) int {
 		start = 1
 	}
 
-	//return res * signMultiplier
+	// return res * signMultiplier
 
 	byte_str := []rune(s)
 	for j := start; j < len(byte_str); j++ {
