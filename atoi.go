@@ -24,7 +24,6 @@ func Atoi(s string) int {
 			return res * signMultiplier
 		}
 		res = res*10 + int(s[i]-'0')
-	}
-		
+	}	
 	return res * signMultiplier
 }
