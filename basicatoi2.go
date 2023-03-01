@@ -1,9 +1,6 @@
 package piscine
 
-import (
-	"fmt"
-	"strings"
-)
+import "strings"
 
 func BasicAtoi2(s string) int {
 	var res int
