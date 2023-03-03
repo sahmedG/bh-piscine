@@ -1,16 +1,15 @@
-package main
+package piscine
 
-import (
-	"fmt"
-)
+func SortIntegerTable2(table []int) {
+	var temp int
+	for i := 0; i <= len(table)-1; i++ {
+		for j := i + 1; j <= len(table)-1; j++ {
+			if table[i] > table[j] {
+				temp = table[i]
+				table[i] = table[j]
+				table[j] = temp
+			}
+		}
 
-func SortIntegerTable(table []int) {
-	for i := 0; i < len(table); i++ {
 	}
-}
-
-func main() {
-	s := []int{5, 4, 3, 2, 1, 0}
-	SortIntegerTable(s)
-	fmt.Println(s)
 }
