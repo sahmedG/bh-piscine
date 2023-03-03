@@ -11,7 +11,7 @@ func PrintComb2() {
 					u := int(k + y)
 					if i == '0' && j == '0' && k == '0' && y == '0' {
 						continue
-					} else if u <= t {
+					} else if i+j >= k+y {
 						continue
 					} else {
 						z01.PrintRune(i)
