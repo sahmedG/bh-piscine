@@ -12,6 +12,5 @@ func SortIntegerTable2(table []int) {
 				table[j] = temp
 			}
 		}
-
 	}
 }
