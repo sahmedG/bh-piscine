@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 func SortIntegerTable2(table []int) {
 	var temp int
 	for i := 0; i <= len(table)-1; i++ {
