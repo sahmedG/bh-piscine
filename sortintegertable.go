@@ -1,6 +1,6 @@
 package piscine
 
-func SortIntegerTable2(table []int) {
+func SortIntegerTable(table []int) {
 	var temp int
 	for i := 0; i <= len(table)-1; i++ {
 		for j := i + 1; j <= len(table)-1; j++ {
