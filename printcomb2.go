@@ -9,7 +9,7 @@ func PrintComb2() {
 				for y := '0'; y <= '9'; y++ {
 					if i == '0' && j == '0' && k == '0' && y == '0' {
 						continue
-					} else if i+j >= k+y {
+					} else if i+j > k+y {
 						continue
 					} else {
 						z01.PrintRune(i)
