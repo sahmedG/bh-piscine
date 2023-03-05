@@ -6,7 +6,7 @@ func NRune(s string, n int) rune {
 		return 0
 	} else if n < 0 {
 		n = n * -1
-		last := firstrune[len(firstrune)-1]
+		last := firstrune[len(firstrune)-n]
 		return last
 	} else {
 		last := firstrune[n-1]
