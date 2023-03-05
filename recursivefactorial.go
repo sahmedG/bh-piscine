@@ -6,9 +6,6 @@ func RecursiveFactorial(nb int) int {
 		Result = 0
 	}
 	if nb <= 26 {
-		if nb == 1 || nb == nb {
-			Result = nb
-		}
 		Result = nb * RecursiveFactorial(nb-1)
 	}
 	return Result
