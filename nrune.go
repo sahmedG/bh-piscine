@@ -12,5 +12,4 @@ func NRune(s string, n int) rune {
 		last := firstrune[n-1]
 		return last
 	}
-
 }
