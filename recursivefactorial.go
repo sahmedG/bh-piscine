@@ -11,8 +11,5 @@ func RecursiveFactorial(nb int) int {
 		}
 		Result = nb * RecursiveFactorial(nb-1)
 	}
-	if Result < 0 {
-		Result = 0
-	} 
 	return Result
 }
