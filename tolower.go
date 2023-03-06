@@ -1,7 +1,7 @@
 package piscine
 
 func ToLower(str string) string {
-	var ret_str = ""
+	ret_str := ""
 	for _, chr := range str {
 		if chr >= 64 && chr <= 90 {
 			chr += 32
