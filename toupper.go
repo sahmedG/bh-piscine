@@ -1,12 +1,12 @@
 package piscine
 
-func toUpper(str string) string {
+func ToUpper(str string) string {
 	ret_str := ""
 	for _, chr := range str {
 		if chr >= 97 && chr <= 122 {
 			chr -= 32
 		}
-		ret_str += fmt.Sprintf("%c", chr)
+		ret_str += string(chr)
 	}
 	return ret_str
 }
