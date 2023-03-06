@@ -1,7 +1,7 @@
 package piscine
 
 func IsAlpha(s string) bool {
-	if len(s) == 0 {
+	if len(s) <= 0 {
 		return false
 	}
 	count := 0
