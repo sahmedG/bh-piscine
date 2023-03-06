@@ -1,7 +1,7 @@
 package piscine
 
 func toUpper(str string) string {
-	var ret_str = ""
+	ret_str := ""
 	for _, chr := range str {
 		if chr >= 97 && chr <= 122 {
 			chr -= 32
