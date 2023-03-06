@@ -17,7 +17,6 @@ func Index(s string, toFind string) int {
 			break
 		}
 	}
-	//fmt.Println(count)
 	if count == len(toFind) {
 		for i = 0; i < len(toFind); i++ {
 			for j := 0; j <= l; j++ {
