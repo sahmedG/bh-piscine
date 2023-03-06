@@ -1,3 +1,5 @@
+package piscine
+
 func Index(s string, toFind string) int {
 	l := len(s) - len(toFind)
 	count := 0
