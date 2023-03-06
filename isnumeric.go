@@ -6,8 +6,6 @@ func IsNumeric(s string) bool {
 	}
 	count := 0
 	byte1 := []byte(s)
-	//fmt.Println(len(byte1))
-	//fmt.Println(len(s))
 	for i := 0; i < len(byte1); i++ {
 		if byte1[i] >= '0' && byte1[i] <= '9' {
 			count++
