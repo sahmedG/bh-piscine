@@ -3,8 +3,7 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintWordsTables(a []string) {
-    for _,char := range(a)
-    {
+    for _,char := range(a) {
         PrintStr(char)
     }
 }
