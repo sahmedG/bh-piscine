@@ -8,7 +8,6 @@ func BasicJoin(elems []string) string {
 		} else {
 			words = words + elems[i] + ":"
 		}
-
 	}
 	return words
 }
