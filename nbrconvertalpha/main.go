@@ -13,7 +13,7 @@ func main() {
 		name := []rune(argumet[i])
 		for t := 0; t < len(name); t++ {
 			j := name[t]
-			z01.Printrune(letters[j])
+			z01.PrintRune(letters[j])
 		}
 	}
 }
