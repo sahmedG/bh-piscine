@@ -7,10 +7,13 @@ func SplitWhiteSpaces(s string) []string {
 		return str_arr
 	}
 	for i := 0; i < len(s); i++ {
-		if !(s[i] == ' ' || s[i] == '\n') {
+		if !(s[i] == ' ' || s[i] == '\n' || s[i] == '\t') {
 			word = word + string(s[i])
 		}
-		if s[i] == ' ' || s[i] == '\n' {
+		if s[i] == ' ' || s[i] == '\n' || s[i] == '\t' {
+			if word == "" {
+				continue
+			}
 			str_arr = append(str_arr, word)
 			word = ""
 		}
