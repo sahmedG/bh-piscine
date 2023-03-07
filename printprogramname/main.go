@@ -5,6 +5,11 @@ import (
 	"os"
 )
 
+func printprogramname() {
+
+	prg_name := os.Args[0]
+	fmt.Printf(prg_name)
+}
 func main() {
-	fmt.Println(os.Args[0])
+	printprogramname()
 }
