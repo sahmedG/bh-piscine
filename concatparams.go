@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 func ConcatParams(args []string) string {
 	string1 := ""
 	if len(args) > 0 {
