@@ -10,7 +10,9 @@ func PrintWordsTables(a []string) {
 }
 
 func PrintStr(s string) {
+    str_rune := []rune(s)
 	for _, word := range s {
 		z01.PrintRune(word)
 	}
+    z01.PrintRune('\n')
 }
