@@ -4,11 +4,11 @@ import "github.com/01-edu/z01"
 
 func PrintWordsTables(a []string) {
 	for _, char := range a {
-		PrintStr(char)
+		PrtRune(char)
 	}
 }
 
-func PrintStr(s string) {
+func PrtRune(s string) {
 	str_rune := []rune(s)
 	for _, word := range str_rune {
 		z01.PrintRune(word)
