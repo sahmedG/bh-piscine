@@ -1,6 +1,6 @@
 package piscine
 
-func BasicJoin(elems []string) string {
+func Join(elems []string) string {
 	words := ""
 	for i := 0; i < len(elems); i++ {
 		if i == len(elems)-1 {
