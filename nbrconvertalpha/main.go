@@ -1,8 +1,9 @@
 package main
 
 import (
-	"os"
 	"flag"
+	"os"
+
 	"github.com/01-edu/z01"
 )
 
