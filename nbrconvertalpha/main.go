@@ -15,5 +15,6 @@ func main() {
 			j := name[t]
 			z01.Printrune(letters[j])
 		}
+		
 	}
 }
