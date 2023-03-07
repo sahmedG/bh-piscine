@@ -10,10 +10,11 @@ func SplitWhiteSpaces(s string) []string {
 		if !(s[i] == ' ' || s[i] == '\n') {
 			word = word + string(s[i])
 		}
-		if !(s[i] >= 'a' && s[i] <= 'z' || s[i] >= 'A' && s[i] <= 'Z') {
+		if s[i] == ' ' || s[i] == '\n' {
 			str_arr = append(str_arr, word)
 			word = ""
 		}
 	}
+	str_arr = append(str_arr, word)
 	return str_arr
 }
