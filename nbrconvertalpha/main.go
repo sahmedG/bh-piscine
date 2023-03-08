@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-
 	mapper := func(argumet string) string {
 		if os.Args[1] == "--upper" {
 			switch argumet {
@@ -137,5 +136,4 @@ func main() {
 			z01.PrintRune(str_rune[i])
 		}
 	}
-
 }
