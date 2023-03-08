@@ -132,6 +132,7 @@ func main() {
 				z01.PrintRune(str_rune[j])
 			}
 		}
+		z01.PrintRune('\n')
 	} else {
 		for i := 1; i < len(os.Args); i++ {
 			str_rune := []rune(os.Expand("${"+os.Args[i]+"}", mapper))
@@ -139,5 +140,6 @@ func main() {
 				z01.PrintRune(str_rune[j])
 			}
 		}
+		z01.PrintRune('\n')
 	}
 }
