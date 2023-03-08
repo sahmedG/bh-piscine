@@ -126,7 +126,6 @@ func main() {
 		return " "
 	}
 	if len(os.Args) == 1 {
-
 	} else if os.Args[1] == "--upper" {
 		for i := 2; i < len(os.Args); i++ {
 			str_rune := []rune(os.Expand("${"+os.Args[i]+"}", mapper))
