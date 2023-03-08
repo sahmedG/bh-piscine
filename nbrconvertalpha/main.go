@@ -128,11 +128,13 @@ func main() {
 	}
 	if os.Args[1] == "--upper" {
 		for i := 2; i < len(os.Args); i++ {
-			z01.PrintRune(os.Expand("${"+os.Args[i]+"}", mapper))
+			str_rune := []rune(os.Expand("${"+os.Args[i]+"}", mapper))
+			z01.PrintRune(str_rune[i])
 		}
 	} else {
 		for i := 1; i < len(os.Args); i++ {
-			z01.PrintRune(os.Expand("${"+os.Args[i]+"}", mapper))
+			str_rune := []rune(os.Expand("${"+os.Args[i]+"}", mapper))
+			z01.PrintRune(str_rune[i])
 		}
 	}
 
