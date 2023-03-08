@@ -125,7 +125,9 @@ func main() {
 		}
 		return " "
 	}
-	if os.Args[1] == "--upper" {
+	if len(os.Args) == 1 {
+		z01.PrintRune('\n')
+	} else if os.Args[1] == "--upper" {
 		for i := 2; i < len(os.Args); i++ {
 			str_rune := []rune(os.Expand("${"+os.Args[i]+"}", mapper))
 			for j := 0; j < len(str_rune); j++ {
