@@ -1,17 +1,14 @@
 package piscine
 
-func Split(str, charset string) []string {
+func Split(s, sep string) []string {
 	length := 0
 	sublength := 0
-
 	for i := range str {
 		length = i + 1
 	}
-
 	for i := range charset {
 		sublength = i + 1
 	}
-
 	for i := 0; i < sublength; i++ {
 		str += " "
 	}
@@ -26,11 +23,9 @@ func Split(str, charset string) []string {
 		}
 	}
 	len++
-
 	arr := make([]string, len)
 	word := ""
 	arindex := 0
-
 	for i := 0; i < length; i++ {
 		if str[i:i+sublength] == charset {
 			l := 0
@@ -48,7 +43,6 @@ func Split(str, charset string) []string {
 		}
 		word += string(str[i])
 	}
-
 	l := 0
 	for i := range word {
 		l = i + 1
