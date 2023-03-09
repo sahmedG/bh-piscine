@@ -3,19 +3,19 @@ package piscine
 func Split(s, sep string) []string {
 	length := 0
 	sublength := 0
-	for i := range str {
+	for i := range s {
 		length = i + 1
 	}
-	for i := range charset {
+	for i := range sep {
 		sublength = i + 1
 	}
 	for i := 0; i < sublength; i++ {
-		str += " "
+		s += " "
 	}
 	prev := false
 	len := 0
 	for i := 0; i < length; i++ {
-		if (str[i:i+sublength] == charset) && !prev {
+		if (s[i:i+sublength] == sep) && !prev {
 			prev = true
 			len++
 		} else {
@@ -27,7 +27,7 @@ func Split(s, sep string) []string {
 	word := ""
 	arindex := 0
 	for i := 0; i < length; i++ {
-		if str[i:i+sublength] == charset {
+		if s[i:i+sublength] == sep {
 			l := 0
 			for i := range word {
 				l = i + 1
@@ -41,7 +41,7 @@ func Split(s, sep string) []string {
 			i = i + sublength - 1
 			continue
 		}
-		word += string(str[i])
+		word += string(s[i])
 	}
 	l := 0
 	for i := range word {
