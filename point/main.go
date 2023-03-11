@@ -18,13 +18,13 @@ func convertInttoRune(nbr int) {
 		count++
 	}
 	if nbr/10 != 0 {
-		convertInttoRune(nbr/10)
+		convertInttoRune(nbr / 10)
 	}
 	z01.PrintRune(count)
 }
 
 func main() {
-	xprint := []rune{'x', ' ', '=' ,' '}
+	xprint := []rune{'x', ' ', '=', ' '}
 	points := &point{}
 	setPoint(points)
 	for _, value := range xprint {
