@@ -22,6 +22,7 @@ func convertInttoRune(nbr int) {
 	}
 	z01.PrintRune(count)
 }
+
 func main() {
 	points := &point{}
 	setPoint(points)
