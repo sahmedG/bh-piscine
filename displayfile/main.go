@@ -6,12 +6,18 @@ import (
 )
 
 func main() {
-	filename := os.Args[1:]
-	file, err := os.Open(filename)
+	args := os.Args[1:]
+	if len(args) < 1 {
+		fmt.Println("File name missing")
+	} else if len(args) > 1 {
+		fmt.Println("Too many arguments")
+	
+	} else { file, err := os.Open(args[0])
 	if err != nil {
-		fmt.Printf("File name is missing")
+		fmt.Printf("Mistake: %v\n" , err.Error())
 	}
-	arr := make([]byte)
+	arr := make([]byte,20)
 	file.Read(arr)
-	fmt.Println(string(arr))
+	fmt.Print(string(arr))
+	}
 }
