@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
     filename := os.Ars[1:]
     file, err := os.Open(filename)
