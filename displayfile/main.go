@@ -16,7 +16,7 @@ func main() {
 		if err != nil {
 			fmt.Printf("Mistake: %v\n", err.Error())
 		}
-		arr := make([]byte, 20)
+		arr := make([]byte, 15)
 		file.Read(arr)
 		fmt.Print(string(arr))
 	}
