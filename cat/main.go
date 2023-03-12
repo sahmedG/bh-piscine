@@ -37,6 +37,7 @@ func main() {
 				z01.PrintRune(err)
 			}
 			z01.PrintRune('\n')
+			os.Exit(1)
 		}
 		for _, char := range data {
 			z01.PrintRune(rune(char))
