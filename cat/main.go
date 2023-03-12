@@ -1,22 +1,38 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
 	args := os.Args[1:]
 	if len(args) < 1 {
-		fmt.Println("Hello")
-		fmt.Println("Hello")
+		z01.PrintRune('H')
+		z01.PrintRune('e')
+		z01.PrintRune('l')
+		z01.PrintRune('l')
+		z01.PrintRune('o')
+		z01.PrintRune('\n')
+		z01.PrintRune('H')
+		z01.PrintRune('e')
+		z01.PrintRune('l')
+		z01.PrintRune('l')
+		z01.PrintRune('o')
+		z01.PrintRune('\n')
 	}
 	for i := 0; i < len(args); i++ {
 		data, err := ioutil.ReadFile(args[i])
 		if err != nil {
-			fmt.Printf("Error: %v\n", err.Error())
+			for _, err := range err.Error() {
+				z01.PrintRune(err)
+			}
+			z01.PrintRune('\n')
 		}
-		fmt.Print(string(data))
+		for _, char := range data {
+			z01.PrintRune(rune(char))
+		}
 	}
 }
