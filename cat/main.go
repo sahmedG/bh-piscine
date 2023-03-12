@@ -26,6 +26,13 @@ func main() {
 	for i := 0; i < len(args); i++ {
 		data, err := ioutil.ReadFile(args[i])
 		if err != nil {
+			z01.PrintRune('E')
+			z01.PrintRune('R')
+			z01.PrintRune('R')
+			z01.PrintRune('O')
+			z01.PrintRune('R')
+			z01.PrintRune(':')
+			z01.PrintRune(' ')
 			for _, err := range err.Error() {
 				z01.PrintRune(err)
 			}
