@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"os"
-)
+import "os"
 
 func convertInttoRune(nbr int) rune {
 	count := '0'
@@ -57,18 +54,17 @@ func main() {
 	secondNbr := Atoi(arguments[2])
 
 	if secondNbr == 0 && arguments[1] == "/" {
-		fmt.Println("No division by 0")
+		os.Stderr.WriteString("No division by 0")
 		return
 	}
 	if secondNbr == 0 && arguments[1] == "%" {
-		fmt.Println("No Modulo by 0")
+		os.Stderr.WriteString("No Modulo by 0")
 		return
 	}
 	result := 0
 	arrayOfFunctions := []func(int, int) int{plus, minus, times, div, mod}
 	result = apply(arrayOfFunctions[sign], firstNbr, secondNbr)
 	if result >= 9223372036854775807 || result <= -9223372036854775808 {
-		fmt.Print()
 	} else {
 		count := convertInttoRune(result)
 		os.Stderr.WriteString(string(count))
