@@ -5,6 +5,17 @@ import (
 	"os"
 )
 
+func convertInttoRune(nbr int) rune {
+	count := '0'
+	for i := 1; i <= nbr%10; i++ {
+		count++
+	}
+	if nbr/10 != 0 {
+		convertInttoRune(nbr / 10)
+	}
+	return count
+}
+
 func main() {
 	arguments := os.Args[1:]
 	length := 0
@@ -59,7 +70,9 @@ func main() {
 	if result >= 9223372036854775807 || result <= -9223372036854775808 {
 		fmt.Print()
 	} else {
-		fmt.Println(result)
+		count := convertInttoRune(result)
+		os.Stderr.WriteString(string(count))
+		os.Stderr.WriteString("\n")
 	}
 }
 
