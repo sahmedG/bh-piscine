@@ -1,16 +1,28 @@
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 func convertInttoRune(nbr int) rune {
-	count := '0'
+	c := '0'
+	fmt.Println(nbr)
+	if nbr == 0 {
+		return c
+	}
 	for i := 1; i <= nbr%10; i++ {
-		count++
+		c++
+		return c
+	}
+	for i := -1; i >= nbr%10; i-- {
+		c++
+		return c
 	}
 	if nbr/10 != 0 {
 		convertInttoRune(nbr / 10)
 	}
-	return count
+	return c
 }
 
 func main() {
@@ -22,6 +34,7 @@ func main() {
 	if length != 3 {
 		return
 	}
+
 	sign := 0
 	if arguments[1] == "+" {
 		sign = 0
@@ -36,6 +49,7 @@ func main() {
 	} else {
 		return
 	}
+
 	for i, s := range arguments[0] {
 		if (s >= '0' && s <= '9') || (i == 0 && s == '-') {
 			continue
