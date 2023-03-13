@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-	//	"github.com/01-edu/z01"
 	"os"
 )
 
 func main() {
 	arguments := os.Args[1:]
-
 	length := 0
 	for i := range arguments {
 		length = i + 1
@@ -16,7 +14,6 @@ func main() {
 	if length != 3 {
 		return
 	}
-
 	sign := 0
 	if arguments[1] == "+" {
 		sign = 0
@@ -31,7 +28,6 @@ func main() {
 	} else {
 		return
 	}
-
 	for i, s := range arguments[0] {
 		if (s >= '0' && s <= '9') || (i == 0 && s == '-') {
 			continue
@@ -39,7 +35,6 @@ func main() {
 			return
 		}
 	}
-
 	for i, s := range arguments[2] {
 		if (s >= '0' && s <= '9') || (i == 0 && s == '-') {
 			continue
@@ -47,7 +42,6 @@ func main() {
 			return
 		}
 	}
-
 	firstNbr := Atoi(arguments[0])
 	secondNbr := Atoi(arguments[2])
 
@@ -59,7 +53,6 @@ func main() {
 		fmt.Println("No Modulo by 0")
 		return
 	}
-
 	result := 0
 	arrayOfFunctions := []func(int, int) int{plus, minus, times, div, mod}
 	result = apply(arrayOfFunctions[sign], firstNbr, secondNbr)
@@ -95,7 +88,6 @@ func apply(f func(int, int) int, a int, b int) int {
 }
 
 func Atoi(s string) int {
-
 	runes := []rune(s)
 	LenRune := 0
 	result := 0
@@ -105,7 +97,6 @@ func Atoi(s string) int {
 	if LenRune == 0 {
 		return 0
 	}
-
 	tens := 1
 	for k := 0; k < LenRune-1; k++ {
 		if runes[k] == '+' || runes[k] == '-' {
@@ -113,7 +104,6 @@ func Atoi(s string) int {
 		}
 		tens *= 10
 	}
-
 	for i := range runes {
 		if (runes[0] == '-' || runes[0] == '+') && i == 0 {
 			continue
