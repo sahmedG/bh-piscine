@@ -1,22 +1,31 @@
 package piscine
 
-func IsSorted(f func(a, b int) int, a []int) bool {
-	res := 0
-	count := 0
-	for i := 0; i < len(a)-1; i++ {
-		res = f(a[i], a[i+1])
-		if res == 1 {
-			count += 1
+func IsSorted(f func(a, b int) int, tab []int) bool {
+	length := 0
+	for i := range tab {
+		length = i + 1
+	}
+
+	asciending := true
+	descending := true
+
+	for i := 1; i < length; i++ {
+		if !(f(tab[i-1], tab[i]) >= 0) {
+			descending = false
 		}
 	}
-	if count == len(a)-1 {
-		return true
+
+	for i := 1; i < length; i++ {
+		if !(f(tab[i-1], tab[i]) <= 0) {
+			asciending = false
+		}
 	}
-	return false
+
+	return asciending || descending
 }
 
 func f(a, b int) int {
-	if b > a {
+	if a > b {
 		return 1
 	} else if a == b {
 		return 0
