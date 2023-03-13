@@ -7,7 +7,7 @@ func CountIf(f func(string) bool, a []string) int {
 	for i := range a {
 		result[i] = f(a[i])
 	}
-	for j:=0;j<len(result);j++ {
+	for j := 0; j < len(result); j++ {
 		if result[j] == true {
 			count += 1
 		}
