@@ -15,7 +15,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 	return false
 }
 
-func SortIntegerTable(a, b int) int {
+func SortInteger(a, b int) int {
 	if a > b {
 		return -1
 	} else if a == b {
