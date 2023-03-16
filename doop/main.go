@@ -1,30 +1,17 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
-func convertInttoRune(nbr int) rune {
-	c := '0'
-	fmt.Println(nbr)
-	if nbr == 0 {
-		return c
+func convertInttoRune(nbr int) string {
+	numStr := ""
+	for nbr > 0 {
+		numStr = string(rune(nbr%10)+'0') + numStr
+		nbr /= 10
 	}
-	for i := 1; i <= nbr%10; i++ {
-		c++
-		return c
-	}
-	for i := -1; i >= nbr%10; i-- {
-		c++
-		return c
-	}
-	if nbr/10 != 0 {
-		convertInttoRune(nbr / 10)
-	}
-	return c
+	return numStr
 }
-
 func main() {
 	arguments := os.Args[1:]
 	length := 0
@@ -34,7 +21,6 @@ func main() {
 	if length != 3 {
 		return
 	}
-
 	sign := 0
 	if arguments[1] == "+" {
 		sign = 0
@@ -49,7 +35,6 @@ func main() {
 	} else {
 		return
 	}
-
 	for i, s := range arguments[0] {
 		if (s >= '0' && s <= '9') || (i == 0 && s == '-') {
 			continue
@@ -66,7 +51,6 @@ func main() {
 	}
 	firstNbr := Atoi(arguments[0])
 	secondNbr := Atoi(arguments[2])
-
 	if secondNbr == 0 && arguments[1] == "/" {
 		os.Stderr.WriteString("No division by 0")
 		return
@@ -85,31 +69,24 @@ func main() {
 		os.Stderr.WriteString("\n")
 	}
 }
-
 func plus(a, b int) int {
 	return a + b
 }
-
 func minus(a, b int) int {
 	return a - b
 }
-
 func times(a, b int) int {
 	return a * b
 }
-
 func div(a, b int) int {
 	return a / b
 }
-
 func mod(a, b int) int {
 	return a % b
 }
-
 func apply(f func(int, int) int, a int, b int) int {
 	return f(a, b)
 }
-
 func Atoi(s string) int {
 	runes := []rune(s)
 	LenRune := 0
