@@ -7,6 +7,9 @@ import (
 func convertInttoRune(nbr int) string {
 	numStr := ""
 	sign := ""
+	if nbr == 0 {
+		return "0"
+	}
 	if nbr < 0 {
 		nbr = nbr * -1
 		sign = "-"
