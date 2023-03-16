@@ -59,10 +59,12 @@ func main() {
 	secondNbr := Atoi(arguments[2])
 	if secondNbr == 0 && arguments[1] == "/" {
 		os.Stderr.WriteString("No division by 0")
+		os.Stderr.WriteString("\n")
 		return
 	}
 	if secondNbr == 0 && arguments[1] == "%" {
 		os.Stderr.WriteString("No Modulo by 0")
+		os.Stderr.WriteString("\n")
 		return
 	}
 	result := 0
