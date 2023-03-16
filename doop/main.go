@@ -66,7 +66,7 @@ func main() {
 		return
 	}
 	if secondNbr == 0 && arguments[1] == "%" {
-		os.Stderr.WriteString("No Modulo by 0")
+		os.Stderr.WriteString("No modulo by 0")
 		os.Stderr.WriteString("\n")
 		return
 	}
