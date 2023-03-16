@@ -6,11 +6,16 @@ import (
 
 func convertInttoRune(nbr int) string {
 	numStr := ""
+	sign := ""
+	if nbr < 0 {
+		nbr = nbr * -1
+		sign = "-"
+	}
 	for nbr > 0 {
 		numStr = string(rune(nbr%10)+'0') + numStr
 		nbr /= 10
 	}
-	return numStr
+	return sign + numStr
 }
 
 func main() {
