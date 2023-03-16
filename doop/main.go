@@ -12,6 +12,7 @@ func convertInttoRune(nbr int) string {
 	}
 	return numStr
 }
+
 func main() {
 	arguments := os.Args[1:]
 	length := 0
@@ -69,24 +70,31 @@ func main() {
 		os.Stderr.WriteString("\n")
 	}
 }
+
 func plus(a, b int) int {
 	return a + b
 }
+
 func minus(a, b int) int {
 	return a - b
 }
+
 func times(a, b int) int {
 	return a * b
 }
+
 func div(a, b int) int {
 	return a / b
 }
+
 func mod(a, b int) int {
 	return a % b
 }
+
 func apply(f func(int, int) int, a int, b int) int {
 	return f(a, b)
 }
+
 func Atoi(s string) int {
 	runes := []rune(s)
 	LenRune := 0
