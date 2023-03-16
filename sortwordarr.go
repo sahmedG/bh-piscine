@@ -5,7 +5,6 @@ func SortWordArr(array []string) {
 	for c := range array {
 		count = c + 1
 	}
-
 	temp := 0
 	for i := 0; i < count-1; i++ {
 		temp = i
@@ -16,5 +15,4 @@ func SortWordArr(array []string) {
 		}
 		array[i], array[temp] = array[temp], array[i]
 	}
-
 }
