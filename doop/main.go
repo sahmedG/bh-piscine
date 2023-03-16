@@ -73,7 +73,7 @@ func main() {
 	result := 0
 	arrayOfFunctions := []func(int, int) int{plus, minus, times, div, mod}
 	result = apply(arrayOfFunctions[sign], firstNbr, secondNbr)
-	if result >= 9223372036854775807 || result <= -9223372036854775808 {
+	if result >= 9223372036854775800 || result <= -9223372036854775808 {
 	} else {
 		count := convertInttoRune(result)
 		os.Stderr.WriteString(string(count))
