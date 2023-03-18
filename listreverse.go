@@ -4,17 +4,17 @@ func ListReverse(l *List) {
 	if l.Head == nil {
 		return
 	}
-	t := l.Head
-	c := l.Head
+	temp := l.Head
+	current := l.Head
 	prev := l.Head
 	prev = nil
-	for c != nil {
-		next := c.next
-		c.Next = prev
-		prev = c
-		c = next
+	for current != nil {
+		next := current.Next
+		current.Next = prev
+		prev = current
+		current = next
 	}
 	l.Head = prev
-	l.Tail = t
+	l.Tail = temp
 	l.Tail.Next = nil
 }
