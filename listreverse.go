@@ -6,7 +6,8 @@ func ListReverse(l *List) {
 	}
 	t := l.Head
 	c := l.Head
-	prev := nil
+	prev := l.Head
+	prev = nil
 	for c != nil {
 		next := c.next
 		c.Next = prev
