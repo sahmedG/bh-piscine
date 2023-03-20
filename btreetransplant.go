@@ -6,7 +6,7 @@ func BTreeTransplant(root, node, rplc *TreeNode) *TreeNode {
 	}
 	replacement := node
 	if node.Parent == nil {
-		replacement.Parent.Right = rplc
+		replacement.Parent.Right = node
 	} else if node == node.Parent.Left {
 		replacement.Parent.Left = rplc
 	} else {
