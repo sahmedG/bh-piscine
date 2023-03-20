@@ -37,8 +37,8 @@ func IsAlNode(node *NodeL) bool {
 	default:
 		return true
 	}
-
 }
+
 func ListForEachIf(l *List, f func(*NodeL), cond func(*NodeL) bool) {
 	a := l.Head
 	for a != nil {
