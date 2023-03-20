@@ -1,15 +1,5 @@
 package piscine
 
-type NodeL struct {
-	Data interface{}
-	Next *NodeL
-}
-
-type List struct {
-	Head *NodeL
-	Tail *NodeL
-}
-
 func CompStr(a, b interface{}) bool {
 	return a == b
 }
