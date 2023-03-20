@@ -9,7 +9,7 @@ func BTreeTransplant(root, node, rplc *TreeNode) *TreeNode {
 		root = rplc
 	} else if node == node.Parent.Left {
 		repl.Parent.Left = rplc
-	} else {
+	} else if node == node.Parent.Right {
 		repl.Parent.Right = rplc
 	}
 	repl.Parent = node.Parent
