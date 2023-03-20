@@ -1,19 +1,19 @@
 package piscine
 
 func SortedListMerge(n1 *NodeI, n2 *NodeI) *NodeI {
-	node1 := ListSort(n1)
-	node2 := ListSort(n2)
-	if node1 == node2 {
-		return node2
+	n1 = ListSort(n1)
+	n2 = ListSort(n2)
+	if n1 == nil {
+		return n2
 	}
-	if node2 == nil {
-		return node1
+	if n1 == nil {
+		return n1
 	}
-	if node1.Data <= node2.Data {
-		node1.Next = SortedListMerge(node1.Next, node2)
-		return node1
+	if n1.Data <= n2.Data {
+		n1.Next = SortedListMerge(n1.Next, n2)
+		return n1
 	} else {
-		node2.Next = SortedListMerge(node1, node2.Next)
-		return node2
+		n2.Next = SortedListMerge(n1, n2.Next)
+		return n2
 	}
 }
