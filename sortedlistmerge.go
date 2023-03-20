@@ -5,8 +5,7 @@ func SortedListMerge(n1 *NodeI, n2 *NodeI) *NodeI {
 	n2 = ListSort(n2)
 	if n1 == nil {
 		return n2
-	}
-	if n1 == nil {
+	} else if n2 == nil {
 		return n1
 	}
 	if n1.Data <= n2.Data {
