@@ -1,0 +1,17 @@
+package piscine
+
+func BTreeTransplant(root, node, rplc *TreeNode) *TreeNode {
+	if root == nil {
+		return nil
+	}
+	repl := node
+	if node.Parent == nil {
+		root = repl
+	} else if node == node.Parent.Left {
+		repl.Parent.Left = rplc
+	} else {
+		repl.Parent.Right = rplc
+	}
+	repl.Parent = node.Parent
+	return root
+}
