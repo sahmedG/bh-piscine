@@ -18,7 +18,7 @@ func BTreeDeleteNode(root, node *TreeNode) *TreeNode {
 			root = nil
 			return t
 		}
-		t := piscine.BTreeMin(root.Right)
+		t := BTreeMin(root.Right)
 		root.Data = t.Data
 		root.Right = BTreeDeleteNode(root.Right, t)
 	}
